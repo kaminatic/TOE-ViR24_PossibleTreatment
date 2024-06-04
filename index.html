@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="lockScreen">
+    <img src="images/logo.svg" id="logo" alt="Logo">
+    <h2 class="roboto-mono-bold">Enter the letter from the previous station (#7)</h2>
+    <input type="text" id="passwordInput" maxlength="1" placeholder="Enter 1-letter password" class="roboto-mono-light">
+    <button id="unlockButton" class="roboto-mono-regular">unlock</button>
+</div>
+
+<div id="content">
+    <img src="images/logo.svg" id="logoContent" alt="Logo">
+    <h2 class="roboto-mono-bold">POSSIBLE TREATMENT</h2>
+    <p class="roboto-mono-medium">
+        Most worryingly, no consistent means of treatment have been found to combat the spread of TOE-ViR29. In a similar way to how a cure for the common cold is still elusive, and how a definitive cure for COVID-19 will most likely remain out of reach due to the highly mutative nature, experts speculate that the many strains of TOE-ViR24 will eventually become endemic. As such, vaccinations for TOE-ViR24 have been considered ineffectual. The most effective measures to increase one’s resistance to TOE-ViR24 are changes in one’s social environments and one’s own responsibility in staying informed as to where certain strains of TOE-ViR24 come from and how one relates themselves to them. As different strains of TOE-ViR24 pass through populations, individual hosts will develop antibodies to its influence in due time, but when exposed to sufficiently altered strains of TOE-ViR24, might still show symptoms ranging in severity. In the end, it will be a matter of consensus between various parties, including governments and academic communities, as to which strains of TOE-ViR24 are considered safe, and which strains are considered harmful and thus need active intervention to keep under control.  </p>
+    <p class="roboto-mono-bold">
+        Drag and drop the strains to achieve a smooth gradient.
+    </p>
+    <div id="gameBoard">
+        <img src="images/img1.svg" id="img1" class="draggable" draggable="true">
+        <img src="images/img2.svg" id="img2" class="draggable" draggable="true">
+        <img src="images/img3.svg" id="img3" class="draggable" draggable="true">
+        <img src="images/img4.svg" id="img4" class="draggable" draggable="true">
+        <img src="images/img5.svg" id="img5" class="draggable" draggable="true">
+    </div>
+    <div class="gradient-label">
+        <div class="label" id="dangerousLabel">
+            <span class="roboto-mono-regular">Dangerous</span>
+        </div>
+        <div class="label" id="safeLabel">
+            <span class="roboto-mono-regular">Safe</span>
+        </div>
+        <img src="images/img7.svg" alt="Gradient Overlay" id="gradientOverlay">
+    </div>
+
+    <div class="test">
+        <img src="./images/img8.svg" id="img8">
+    </div>
+
+    <div id="message" class="roboto-mono-bold" style="display:none;">
+        Congratulations! You have correctly identified the dangerous strains. The letter of this station is <img src="images/img6.svg" alt="Letter">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

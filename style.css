@@ -1,0 +1,175 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #3C0C3E; /* Change text color to #3C0C3E */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto Mono", monospace;
+    background-color: rgb(253, 241, 243);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#lockScreen, #content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#lockScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+#passwordInput {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #3C0C3E; /* Border color for input */
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+#unlockButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #FF8C8C, #FF3D3D);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 500px;
+}
+
+#logoContent {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin: 0 20px;
+    text-align: justify;
+}
+
+#gameBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 20px 0;
+}
+
+.draggable {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+}
+
+.gradient-label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.label {
+    position: relative;
+    z-index: 1;
+}
+
+#gradientOverlay {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.gradient-label span {
+    font-size: 1em;
+}
+
+#message {
+    font-size: 1.2em;
+    color: red;
+    opacity: 0;
+    animation: fade-in 1s linear forwards;
+    position: absolute;
+    display: none;
+}
+
+.test {
+    margin-top: 50px;
+}
+
+/* Define specific font styles */
+.roboto-mono-bold {
+    font-weight: 700;
+    margin: 20px;
+}
+
+.roboto-mono-italic {
+    font-style: italic;
+}
+
+.roboto-mono-light {
+    font-weight: 300;
+}
+
+.roboto-mono-regular {
+    font-weight: 400;
+}
+
+/* animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
