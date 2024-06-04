@@ -1,4 +1,4 @@
-const correctPasswords = ['a', 'A'];
+const correctPasswords = ['i', 'I'];
 const passwordInput = document.getElementById('passwordInput');
 const unlockButton = document.getElementById('unlockButton');
 const lockScreen = document.getElementById('lockScreen');
