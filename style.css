@@ -33,7 +33,8 @@ body {
 }
 
 #logo {
-    width: 100px;
+    width: 20vw; /* Adjust for mobile using viewport width */
+    max-width: 100px; /* Optional, to limit max width */
     margin-bottom: 20px;
 }
 
@@ -44,6 +45,8 @@ body {
     border-radius: 5px;
     outline: none;
     text-align: center;
+    width: 80%; /* Adjust for mobile */
+    max-width: 300px; /* Optional, to limit max width */
 }
 
 #unlockButton {
@@ -55,6 +58,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 80%; /* Adjust for mobile */
+    max-width: 300px; /* Optional, to limit max width */
 }
 
 #content {
@@ -62,11 +67,12 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-bottom: 500px;
+    padding-bottom: 200px; /* Adjust for mobile */
 }
 
 #logoContent {
-    width: 100px;
+    width: 20vw; /* Adjust for mobile using viewport width */
+    max-width: 100px; /* Optional, to limit max width */
     margin-bottom: 20px;
 }
 
@@ -77,62 +83,83 @@ h2 {
 p {
     margin: 0 20px;
     text-align: justify;
+    font-size: 0.9em; /* Adjust for mobile */
 }
 
 #gameBoard {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Ensure horizontal alignment */
     align-items: center;
-    gap: 0;
+    gap: 2vw; /* Small gap for mobile, using viewport width */
     margin: 20px 0;
+    width: 90vw; /* Ensure the game board takes up most of the screen width */
+    max-width: 600px; /* Optional, to limit max width */
 }
 
-.draggable {
-    width: 80px;
-    height: 80px;
+.selectable {
+    width: 15vw; /* Adjust for mobile using viewport width */
+    max-width: 70px; /* Optional, to limit max width */
+    height: auto; /* Maintain aspect ratio */
     cursor: pointer;
     display: block;
     margin: 0;
 }
 
+#gradientOverlay {
+    width: 90%; /* Make the overlay width responsive */
+    height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: -20px;
+    display: block;
+}
+
 .gradient-label {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 400px;
-    margin: 10px 0;
+    width: calc(100% - 40px); /* Same width as the body text (20px padding on each side) */
+    max-width: calc(600px - 40px); /* Optional, to limit max width */
+    margin: 10px 20px; /* Align with body text margin */
     position: relative;
 }
 
 .label {
-    position: relative;
+    position:relative;
+    margin: -20px;
     z-index: 1;
 }
 
-#gradientOverlay {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
 .gradient-label span {
-    font-size: 1em;
+    font-size: 0.9em; /* Adjust for mobile */
 }
 
 #message {
-    font-size: 1.2em;
+    font-size: 1em; /* Adjust for mobile */
     color: red;
     opacity: 0;
-    animation: fade-in 1s linear forwards;
-    position: absolute;
+    transition: opacity 1s linear;
+    position: absolute; /* Use absolute to position relative to the container */
+    margin-top: 100px;
     display: none;
+    width: 80%; /* Adjust for mobile */
+    max-width: 300px; /* Optional, to limit max width */
+}
+
+#img8 {
+    transition: opacity 1s linear;
+    width: 20vw; /* Adjust for mobile using viewport width */
+    max-width: 100px; /* Optional, to limit max width */
+    position: relative;
 }
 
 .test {
-    margin-top: 50px;
+    margin-top: 100px; /* Adjust for mobile */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Define specific font styles */
