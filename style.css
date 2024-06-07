@@ -106,11 +106,9 @@ p {
 }
 
 #gradientOverlay {
-    width: 90%; /* Make the overlay width responsive */
+    width: 100%; /* Make the overlay width responsive */
     height: auto;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: -20px;
+    margin: 20px auto; /* Center the overlay vertically */
     display: block;
 }
 
@@ -119,9 +117,24 @@ p {
     justify-content: space-between;
     width: calc(100% - 40px); /* Same width as the body text (20px padding on each side) */
     max-width: calc(600px - 40px); /* Optional, to limit max width */
-    margin: 10px 20px; /* Align with body text margin */
+    margin: 10px auto; /* Center the labels horizontally */
     position: relative;
 }
+
+#message {
+    font-size: 1em; /* Adjust for mobile */
+    color: red;
+    opacity: 0;
+    transition: opacity 1s linear;
+    position: absolute; /* Use absolute to position relative to the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    display: none;
+    width: 80%; /* Adjust for mobile */
+    max-width: 300px; /* Optional, to limit max width */
+}
+
 
 .label {
     position:relative;
@@ -133,17 +146,6 @@ p {
     font-size: 0.9em; /* Adjust for mobile */
 }
 
-#message {
-    font-size: 1em; /* Adjust for mobile */
-    color: red;
-    opacity: 0;
-    transition: opacity 1s linear;
-
-    margin-top: 100px;
-    display: none;
-    width: 80%; /* Adjust for mobile */
-    max-width: 300px; /* Optional, to limit max width */
-}
 
 #img8 {
     transition: opacity 1s linear;
